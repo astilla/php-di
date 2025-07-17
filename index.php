@@ -24,5 +24,6 @@ $container = $containerBuilder->build();
 
 $foo = $container->get(Foo::class);
 
-$foo->sayBar();
-$foo->sayBaz();
+$foo->sayBar(); // This one injects `Bar` via contructor auto-wiring
+
+$foo->sayBaz(); // This one injects `Baz` via variable annotation auto-wiring
