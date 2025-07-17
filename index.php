@@ -8,7 +8,7 @@ $containerBuilder = new ContainerBuilder();
 
 // For things like top level controllers, the php-di best practice guide (https://github.com/PHP-DI/PHP-DI/blob/6.4/doc/best-practices.md)
 // suggests ('@Inject'ing dependencies at the top level - you need doctrine/annotations for this and then switch it on) 
-// $containerBuilder->useAnnotations(true); // Needs doctrine/annotations (see: https://github.com/PHP-DI/PHP-DI/blob/6.4/doc/annotations.md#annotations)
+$containerBuilder->useAnnotations(true); // Needs doctrine/annotations (see: https://github.com/PHP-DI/PHP-DI/blob/6.4/doc/annotations.md#annotations)
 
 // We only need definitions listed for anything that can't be autowired
 // or needs to know parameter values.
@@ -25,3 +25,4 @@ $container = $containerBuilder->build();
 $foo = $container->get(Foo::class);
 
 $foo->sayBar();
+$foo->sayBaz();
