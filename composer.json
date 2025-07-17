@@ -1,25 +1,25 @@
 {
     "name": "astilla/php-di",
     "version": "1.0.0",
-    "config": {
-        "platform": {
-            "php": "7.4.33"
-        }
-    },
-    "minimum-stability": "stable",
-    "autoload": {
-        "classmap": [
-            "src/"
-        ]
-    },
     "authors": [
         {
             "name": "Andrew Bate",
             "email": "andrew.bate@technologyfromsage.com"
         }
     ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
     "require": {
         "php-di/php-di": "^6.4",
         "doctrine/annotations": "^2.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
     }
 }
